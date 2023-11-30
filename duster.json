@@ -11,5 +11,10 @@
         "routes",
         "storage",
         "vendor"
-    ]
+    ],
+    "scripts": {
+        "lint": {
+            "phpstan": ["./vendor/bin/phpstan", "analyse"]
+        }
+    }
 }
