@@ -48,10 +48,10 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "lint_all_code": "./vendor/bin/duster lint",
-        "fix_all_code": "./vendor/bin/duster fix",
-        "lint_code": "./vendor/bin/duster lint --dirty",
-        "fix_code": "./vendor/bin/duster fix --dirty"
+        "lint_code": "./vendor/bin/duster lint",
+        "fix_code": "./vendor/bin/duster fix",
+        "lint_git": "./vendor/bin/duster lint --dirty",
+        "fix_git": "./vendor/bin/duster fix --dirty"
     },
     "extra": {
         "laravel": {
