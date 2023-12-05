@@ -1,6 +1,9 @@
 <?php
-
+use App\Models\User;
+use App\Models\Produkt;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\ProduktController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', [ProduktController::class, 'test']);
+
+Route::get('/factory_test', [ProduktController::class, 'factory_test']);
