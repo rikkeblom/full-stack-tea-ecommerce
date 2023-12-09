@@ -52,4 +52,5 @@
             </div>
         </div>
     <!--/ Kontakt os -->
+    <script src="{{asset('frontend/js/mobileHeader.js')}}"></script>
 </footer>

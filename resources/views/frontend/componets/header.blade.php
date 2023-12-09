@@ -1,6 +1,9 @@
 <header>
     <!-- Links to pages -->
         <div class="links">
+            <button class="brugerMenu">
+                @include('frontend.componets.svger.burgerMenu')
+            </button>
             <a href="">Shop Te</a>
             <a href="">Om Rivitea</a>
         </div>
@@ -27,3 +30,9 @@
         </div>
     <!--/ Cart and Search icons -->
 </header>
+<!-- Links to pages mobile -->
+<div class="links_box">
+    <a href="">Shop Te</a>
+    <a href="">Om Rivitea</a>
+</div>
+<!--/ Links to pages mobile -->

@@ -1,0 +1,78 @@
+@media screen and (max-width: 754px) {
+    footer {
+        gap: 1rem !important;
+        padding: 1rem 1rem !important;
+    }
+
+    .SoMe {
+        width: 30% !important;
+    }
+
+    .footer_links {
+        width: 30% !important;
+    }
+}
+
+@media screen and (max-width: 684px) {
+    .links a {
+        padding: 0 0.5rem !important;
+    }
+}
+
+@media screen and (max-width: 577px) {
+    .brugerMenu {
+        display: block !important;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0 0.5rem;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .svger div {
+        padding: 0 0.5rem !important;
+    }
+
+    .links_box {
+        width: 100vw;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color: var(--lightGreen);
+    }
+
+    .links_box a {
+        display: flex;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        font-family: 'Rosario', sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+        color: var(--white);
+    }
+
+    footer .svg {
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+
+    .SoMe + .footer_links {
+        width: auto !important;
+    }
+
+    .SoMe h3 {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .SoMe {
+        width: 40% !important;
+    }
+}

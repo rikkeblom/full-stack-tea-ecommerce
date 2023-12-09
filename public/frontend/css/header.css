@@ -1,5 +1,3 @@
-@import url(colors.css);
-
 header {
     display: flex;
     background-color: var(--green);
@@ -9,7 +7,11 @@ header {
 }
 
 .links {
-    width: 25%;
+    width: 30%;
+}
+
+.brugerMenu {
+    display: none;
 }
 
 .links a {
@@ -28,10 +30,17 @@ header {
 
 .svger {
     display: flex;
-    width: 25%;
+    width: 30%;
     justify-content: flex-end;
 }
 
 .svger div {
     padding: 0 1rem;
+}
+
+.links_box {
+    margin-left: -570px;
+    transition: all .9s;
+    opacity: 0;
+    position: absolute;
 }
