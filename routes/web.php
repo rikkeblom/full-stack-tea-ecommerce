@@ -4,6 +4,9 @@ use App\Models\Produkt;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProduktController;
+use App\Http\Controllers\KollektionController;
+use App\Http\Controllers\KurvController;
+use App\Http\Controllers\ProduktKollektionForbindelseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +23,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', [ProduktController::class, 'test']);
+Route::get('/test2', [KollektionController::class, 'test']);
 
-Route::get('/factory_test', [ProduktController::class, 'factory_test']);
+Route::get('/test1', [KurvController::class, 'test']);

@@ -11,10 +11,7 @@ class ProduktController extends Controller
 {
     public function test(){
         $produkter = Produkt::get();
-        return view('test')->with('produkter',$produkter);
+        return view('test2')->with('produkter',$produkter);
     }
 
-    public function factory_test(){
-        
-    }
 }

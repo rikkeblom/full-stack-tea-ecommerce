@@ -6,17 +6,28 @@
     <title>Testing</title>
 </head>
 <body>
-    <h2>test routes and views</h2>
+    
+    <h1>test routes and views</h1>
+    @foreach($kollektion as $key=>$kollektion)
+        <h2>{{$kollektion->titel}}</h2>
+        <p>{{$kollektion->beskrivelse}}</p>
 
-    <table>
+        <h3>Produkter i kollektionen</h3>
+        <table>
+            @foreach($kollektion->produkt as $key=>$produkt)
+            <tr>    
+                <td>Titel: {{$produkt->titel}}</td>
+                <td>Beskrivelse: {{$produkt->beskrivelse}}</td>
+            </tr>
+            @foreach($produkt->variant as $key=>$variant)
+            <tr>    
+                <td>{{$variant->titel}}</td>
+                <td>{{$variant->pris}}</td>
+            </tr>
+            @endforeach
 
-        @foreach($produkter as $key=>$produkt)
-        <tr>    
-            <td>{{$produkt->titel}}</td>
-            <td>{{$produkt->beskrivelse}}</td>
-        </tr>
-        @endforeach
-
-    </table>
+            @endforeach
+        </table>
+    @endforeach
 </body>
 </html>

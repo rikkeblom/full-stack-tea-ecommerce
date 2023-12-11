@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Produkt;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
