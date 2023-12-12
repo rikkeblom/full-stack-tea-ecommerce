@@ -13,4 +13,5 @@
 <link rel="stylesheet" href="{{asset('frontend/css/header.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/hero.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/forside.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/kollektionsside.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/footer.css')}}">

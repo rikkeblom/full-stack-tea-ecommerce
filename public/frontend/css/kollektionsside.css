@@ -1,0 +1,53 @@
+.allProductHeader {
+    padding: 4rem;
+    width: 38%;
+    margin: auto;
+}
+
+.allProductHeader h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 3rem;
+}
+
+.allProductHeader p {
+    font-family: 'Rosario', sans-serif;
+}
+
+@media screen and (max-width: 1112px) {
+    .allProductHeader {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 928px) {
+    .allProductHeader {
+        width: 58%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .allProductHeader {
+        width: 68%;
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 654px) {
+    .allProductHeader {
+        width: 78%;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 494px) {
+    .allProductHeader {
+        width: 88%;
+        padding: 1rem;
+    }
+
+    .allProductHeader h1 {
+        font-size: 2rem;
+    }
+}
