@@ -22,10 +22,6 @@
 @media screen and (max-width: 577px) {
     .brugerMenu {
         display: block !important;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0 0.5rem;
     }
 
     .links a {

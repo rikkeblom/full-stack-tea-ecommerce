@@ -7,6 +7,7 @@
 <body>
     @include('frontend.componets.allProduct_header')
     @include('frontend.componets.allProduct_sorting')
+    @include('frontend.componets.allProduct_filter')
 </body>
     @include('frontend.componets.footer')
 </html>

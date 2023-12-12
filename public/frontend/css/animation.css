@@ -1,4 +1,4 @@
-.links_box--open {
+.links_box--open, .mobileFilterContainer--open {
     margin-left: 0px !important;
     opacity: 100% !important;
 }

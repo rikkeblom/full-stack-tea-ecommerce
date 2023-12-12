@@ -19,7 +19,6 @@
     width: 100%;
     background-color: var(--lightGreen);
     padding: 0.5rem 2rem;
-    margin-bottom: 1rem;
     display: flex;
     justify-content: end;
 }
@@ -30,6 +29,54 @@
     padding: 0.3rem;
     font-family: 'Rosario', sans-serif;
 }
+
+.sortingContainer .brugerMenu svg {
+    padding-top: 1px;
+}
+
+.mobileFilterContainer {
+    background: var(--lightGreen);
+    width: 100%;
+    padding: 1rem 2rem;
+    position: absolute;
+    margin-left: -770px;
+    transition: all .9s;
+    opacity: 0;
+}
+
+.filterContainer {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter h2 {
+    font-family: 'Patrick Hand', cursive;
+    text-decoration: underline var(--green);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.3em;
+}
+
+.filter label {
+    font-family: 'Rosario', sans-serif;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter input {
+    width: 2rem;
+}
+
+/* -------------------------------------------------- */
+/* ---------- Responsive (Ipad and Mobile) ---------- */
+/* -------------------------------------------------- */
 
 @media screen and (max-width: 1112px) {
     .allProductHeader {
@@ -47,6 +94,18 @@
     .allProductHeader {
         width: 68%;
         padding: 3rem;
+    }
+
+    .sortingContainer {
+        justify-content: space-between;
+    }
+    
+    .sortingContainer .brugerMenu {
+        display: block !important;
+    }
+
+    .filterContainer {
+        display: none;
     }
 }
 
