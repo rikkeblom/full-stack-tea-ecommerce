@@ -6,7 +6,8 @@
     @include('frontend.componets.header')
 <body>
     @include('frontend.componets.hero')
-    <h1>Home</h1>
+    @include('frontend.componets.teaLinks')
+    @include('frontend.componets.carousel')
 </body>
     @include('frontend.componets.footer')
 </html>
