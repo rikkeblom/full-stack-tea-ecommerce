@@ -1,0 +1,20 @@
+{
+    "include" : [
+        "public",
+        "tests"
+    ],
+    "exclude" : [
+        "app",
+        "config",
+        "database",
+        "resources",
+        "routes",
+        "storage",
+        "vendor"
+    ],
+    "scripts": {
+        "lint": {
+            "phpstan": ["./vendor/bin/phpstan", "analyse"]
+        }
+    }
+}

@@ -11,21 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('varianter', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->foreign('produkt_id')->references('id')->on('Produkt')->onDelete('SET NULL');
             $table->timestamps();
-        });
-
-        Schema::create('produkter', function (Blueprint $table) {
-            $table->id();
             $table->string('titel');
             $table->string('type');
-            $table->string('beskrivelse');
+            $table->smallInteger('lager');
+            $table->smallInteger('pris');
         });
     }
 
@@ -34,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('varianter');
     }
 };
