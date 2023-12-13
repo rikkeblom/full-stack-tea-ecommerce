@@ -9,9 +9,11 @@
 
 <link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/animation.css')}}">
-<link rel="stylesheet" href="{{asset('frontend/css/mobile_header_footer.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/header.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/hero.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/forside.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/kollektionsside.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/footer.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/950.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/768.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/480.css')}}">

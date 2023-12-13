@@ -8,7 +8,7 @@
     text-align: center;
     margin-bottom: 1rem;
     font-family: 'Patrick Hand', cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .allProductHeader p {
@@ -32,16 +32,6 @@
 
 .sortingContainer .brugerMenu svg {
     padding-top: 1px;
-}
-
-.mobileFilterContainer {
-    background: var(--lightGreen);
-    width: 100%;
-    padding: 1rem 2rem;
-    position: absolute;
-    margin-left: -770px;
-    transition: all .9s;
-    opacity: 0;
 }
 
 .filterContainer {
@@ -72,57 +62,4 @@
 
 .filter input {
     width: 2rem;
-}
-
-/* -------------------------------------------------- */
-/* ---------- Responsive (Ipad and Mobile) ---------- */
-/* -------------------------------------------------- */
-
-@media screen and (max-width: 1112px) {
-    .allProductHeader {
-        width: 48%;
-    }
-}
-
-@media screen and (max-width: 928px) {
-    .allProductHeader {
-        width: 58%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .allProductHeader {
-        width: 68%;
-        padding: 3rem;
-    }
-
-    .sortingContainer {
-        justify-content: space-between;
-    }
-    
-    .sortingContainer .brugerMenu {
-        display: block !important;
-    }
-
-    .filterContainer {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 654px) {
-    .allProductHeader {
-        width: 78%;
-        padding: 2rem;
-    }
-}
-
-@media screen and (max-width: 494px) {
-    .allProductHeader {
-        width: 88%;
-        padding: 1rem;
-    }
-
-    .allProductHeader h1 {
-        font-size: 2rem;
-    }
 }
