@@ -55,4 +55,5 @@
     <script src="{{asset('frontend/js/mobileHeader.js')}}"></script>
     <script src="{{asset('frontend/js/carouselarrow.js')}}"></script>
     <script src="{{asset('frontend/js/allProductFilter.js')}}"></script>
+    <script src="{{asset('frontend/js/allProductPageLimit.js')}}"></script>
 </footer>

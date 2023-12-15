@@ -7,7 +7,13 @@
 <body>
     @include('frontend.componets.allProduct_header')
     @include('frontend.componets.allProduct_sorting')
-    @include('frontend.componets.allProduct_filter')
+    <div class="allProducts_wrapper">
+        @include('frontend.componets.allProduct_filter')
+        <div>
+            @include('frontend.componets.allProduct_products')
+            @include('frontend.componets.allProduct_seo')
+        </div>
+    </div>
 </body>
     @include('frontend.componets.footer')
 </html>
