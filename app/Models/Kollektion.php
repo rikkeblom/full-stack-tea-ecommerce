@@ -12,7 +12,8 @@ class Kollektion extends Model
     protected $fillable = [
         'navn',
         'billede',
-        'beskrivelse'
+        'beskrivelse',
+        'seo_tekst'
     ];
 
     public function produkt() 

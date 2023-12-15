@@ -30,6 +30,12 @@ class Ordre extends Model
         return $this->belongsTo(\App\Models\Status::class, 'betalingsstatus_id');
     }
 
+    public function betalingsmetode()
+    {
+        return $this->belongsTo(\App\Models\Betalingsmetode::class, 'betalingsmetode_id');
+    }
+
+
     public function leveringsstatus()
     {
         return $this->belongsTo(\App\Models\Status::class, 'leveringsstatus_id');

@@ -19,13 +19,6 @@
                 <td>Titel: {{$produkt->titel}}</td>
                 <td>Beskrivelse: {{$produkt->beskrivelse}}</td>
             </tr>
-            @foreach($produkt->variant as $key=>$variant)
-            <tr>    
-                <td>{{$variant->titel}}</td>
-                <td>{{$variant->pris}}</td>
-            </tr>
-            @endforeach
-
             @endforeach
         </table>
     @endforeach

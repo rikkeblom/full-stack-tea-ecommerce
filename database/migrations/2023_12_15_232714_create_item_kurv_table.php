@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('item_kurv', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
+            $table->unsignedBigInteger('kurv_id')->nullable();
+            $table->unsignedBigInteger('item_id')->nullable();
+            $table->foreign('kurv_id')->references('id')->on('kurve')->onDelete('SET NULL');
+            $table->foreign('item_id')->references('id')->on('items')->onDelete('SET NULL');
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('item_kurv');
     }
 };
