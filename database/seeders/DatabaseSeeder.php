@@ -12,12 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\Produkt::factory(10)->create();
+        //table
+        $this->call(AdresserSeeder::class);
+        $this->call(BetalingsmetoderSeeder::class);
+        $this->call(ItemsSeeder::class);
+        $this->call(KollektionerSeeder::class);
+        $this->call(KurveSeeder::class);
+        $this->call(StatusSeeder::class);
+        $this->call(ProdukterSeeder::class);
 
-        \App\Models\Produkt::factory()->create([
-            'titel' => 'Test Produkt',
-            'type' => 'ren te',
-            'beskrivelse' => 'test beskrivelse'
-        ]);
+        $this->call(VarianterSeeder::class);
+        $this->call(OrdrerSeeder::class);
+        $this->call(Kollektion_produktSeeder::class);
     }
 }
