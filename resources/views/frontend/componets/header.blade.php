@@ -4,7 +4,7 @@
             <button class="brugerMenu">
                 @include('frontend.componets.svger.burgerMenu')
             </button>
-            <a href="">Shop Te</a>
+            <a href="kollektionsside">Shop Te</a>
             <a href="">Om Rivitea</a>
         </div>
     <!--/ Links to pages -->

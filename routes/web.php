@@ -27,6 +27,10 @@ Route::get('home', function () {
     return view('home');
 });
 
+Route::get('kollektionsside', function () {
+    return view('allProducts');
+});
+
 Route::get('/test2', [KollektionController::class, 'test']);
 
 Route::get('/test1', [KurvController::class, 'test']);

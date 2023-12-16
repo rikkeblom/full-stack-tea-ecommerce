@@ -7,39 +7,7 @@
     color: var(--white);
     font-family: 'Patrick Hand', cursive;
     position: relative;
-    padding: 2rem 30rem;
+    padding: 2rem 2rem;
     top: -300px;
     text-align: center;
-}
-
-@media screen and (max-width: 1172px) {
-    .heroText h1 {
-        padding: 2rem 20rem;
-    }
-}
-
-@media screen and (max-width: 852px) {
-    .heroText {
-        height: 300px;
-    }
-
-    .heroText h1 {
-        padding: 7rem 10rem;
-    }
-
-    .heroText img {
-        height: 40vh;
-    }
-}
-
-@media screen and (max-width: 530px) {
-    .heroText h1 {
-        padding: 7rem 5rem;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .heroText h1 {
-        padding: 7rem 3rem;
-    }
 }
