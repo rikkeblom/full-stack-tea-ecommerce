@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kurv_item', function (Blueprint $table) {
+        Schema::create('item_kurv', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('kurv_id')->nullable();
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kurv_item');
+        Schema::dropIfExists('item_kurv');
     }
 };
