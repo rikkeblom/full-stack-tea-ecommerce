@@ -115,17 +115,3 @@
 .carouselText div p:last-child {
     font-size: 10px;
 }
-
-@media screen and (max-width: 850px) {
-    .favoritTeLinks {
-        overflow-x: scroll;
-        scrollbar-color: var(--green) rgb(240, 240, 240);
-        scrollbar-width: 10px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .sliderButton {
-        padding: 0 0;
-    }
-}
