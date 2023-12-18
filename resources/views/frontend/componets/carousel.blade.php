@@ -11,7 +11,7 @@
             <div class="carouselProduct">
                 <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
                 <div class="carouselText">
-                    <!-- <h3>{{$variant->produkt->titel}}</h3> -->
+                    <h3>{{$variant->produkt->titel}}</h3>
                     <div>
                         <p>{{$variant->pris}} kr</p>
                         <p>&nbsp</p>
