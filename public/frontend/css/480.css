@@ -78,4 +78,12 @@
     .allProductHeader h1 {
         font-size: 2rem;
     }
+
+    /* --------------------------------- */
+    /* ---------- Produktside ---------- */
+    /* --------------------------------- */
+
+    .moreLess_kurv_buttons {
+        flex-wrap: wrap;
+    }
 }
