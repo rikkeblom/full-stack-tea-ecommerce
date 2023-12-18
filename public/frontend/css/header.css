@@ -1,0 +1,37 @@
+@import url(colors.css);
+
+header {
+    display: flex;
+    background-color: var(--green);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.links {
+    width: 25%;
+}
+
+.links a {
+    color: var(--white);
+    padding: 0 1rem;
+    text-decoration: none;
+    font-family: 'Rosario', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.links a:hover {
+    color: var(--lightGreen);
+    text-decoration: underline;
+}
+
+.svger {
+    display: flex;
+    width: 25%;
+    justify-content: flex-end;
+}
+
+.svger div {
+    padding: 0 1rem;
+}
