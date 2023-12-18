@@ -1,6 +1,12 @@
 <?php
-
+use App\Models\User;
+use App\Models\Produkt;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\ProduktController;
+use App\Http\Controllers\KollektionController;
+use App\Http\Controllers\KurvController;
+use App\Http\Controllers\ProduktKollektionForbindelseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +26,11 @@ Route::get('/', function () {
 Route::get('home', function () {
     return view('home');
 });
+
+Route::get('/checkout', function () {
+    return view('frontend.componets.checkout');
+});
+
+Route::get('/test2', [KollektionController::class, 'test']);
+
+Route::get('/test1', [KurvController::class, 'test']);
