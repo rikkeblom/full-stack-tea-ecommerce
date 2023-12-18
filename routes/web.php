@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/checkout', function () {
+    return view('frontend.componets.checkout');
+});
+
 Route::get('/test2', [KollektionController::class, 'test']);
 
 Route::get('/test1', [KurvController::class, 'test']);
