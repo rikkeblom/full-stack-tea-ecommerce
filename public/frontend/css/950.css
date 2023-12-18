@@ -38,4 +38,16 @@
     .filterContainer {
         width: 40%;
     }
+
+    /* --------------------------------- */
+    /* ---------- Produktside ---------- */
+    /* --------------------------------- */
+
+    .imgContainer {
+        width: 50%;
+    }
+
+    .moreLess_kurv_buttons {
+        flex-wrap: wrap;
+    }
 }
