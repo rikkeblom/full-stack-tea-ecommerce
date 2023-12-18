@@ -1,0 +1,41 @@
+.heroText {
+    height: 500px;
+    overflow: hidden;
+}
+
+.heroText h1 {
+    color: var(--white);
+    font-family: 'Patrick Hand', cursive;
+    position: relative;
+    padding: 2rem 30rem;
+    top: -300px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1172px) {
+    .heroText h1 {
+        padding: 2rem 20rem;
+    }
+}
+
+@media screen and (max-width: 852px) {
+    .heroText h1 {
+        padding: 2rem 10rem;
+    }
+
+    .heroText img {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .heroText h1 {
+        padding: 2rem 5rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .heroText h1 {
+        padding: 2rem 3rem;
+    }
+}

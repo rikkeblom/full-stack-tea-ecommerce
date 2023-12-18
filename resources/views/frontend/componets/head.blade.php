@@ -8,5 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rosario:wght@400;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/animation.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/mobile_header_footer.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/header.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/hero.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/footer.css')}}">
