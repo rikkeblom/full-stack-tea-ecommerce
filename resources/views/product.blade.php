@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    @include('frontend.componets.head')
-</head>
-    @include('frontend.componets.header')
-<body>
+@extends('frontend.layouts.main_layout')
+
+@section('indhold')
     <div class="productPage">
         @include('frontend.componets.product_images')
         <div class="productPageDiv">
@@ -12,6 +8,4 @@
             @include('frontend.componets.product_buttons')
         </div>
     </div>
-</body>
-    @include('frontend.componets.footer')
-</html>
+@endsection
