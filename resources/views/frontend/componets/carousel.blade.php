@@ -5,94 +5,23 @@
             @include('frontend.componets.svger.arrowLeft')
         </button>
         <div class="carousel">
+        @foreach($varianter as $key=>$variant)
+        @foreach($variant as $key=>$produkt)
+            @if ($loop->first)
             <div class="carouselProduct">
                 <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
                 <div class="carouselText">
-                    <h3>Grøn Te</h3>
+                    <!-- <h3>{{$variant->produkt->titel}}</h3> -->
                     <div>
-                        <p>65 kr</p>
+                        <p>{{$variant->pris}} kr</p>
                         <p>&nbsp</p>
-                        <p>pr 100g</p>
+                        <p>{{$variant->titel}}</p>
                     </div>
                 </div>
             </div>
-            <div class="carouselProduct">
-                <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
-                <div class="carouselText">
-                    <h3>Grøn Te</h3>
-                    <div>
-                        <p>65 kr</p>
-                        <p>&nbsp</p>
-                        <p>pr 100g</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carouselProduct">
-                <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
-                <div class="carouselText">
-                    <h3>Grøn Te</h3>
-                    <div>
-                        <p>65 kr</p>
-                        <p>&nbsp</p>
-                        <p>pr 100g</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carouselProduct">
-                <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
-                <div class="carouselText">
-                    <h3>Grøn Te</h3>
-                    <div>
-                        <p>65 kr</p>
-                        <p>&nbsp</p>
-                        <p>pr 100g</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carouselProduct">
-                <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
-                <div class="carouselText">
-                    <h3>Grøn Te</h3>
-                    <div>
-                        <p>65 kr</p>
-                        <p>&nbsp</p>
-                        <p>pr 100g</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carouselProduct">
-                <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
-                <div class="carouselText">
-                    <h3>Grøn Te</h3>
-                    <div>
-                        <p>65 kr</p>
-                        <p>&nbsp</p>
-                        <p>pr 100g</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carouselProduct">
-                <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
-                <div class="carouselText">
-                    <h3>Grøn Te</h3>
-                    <div>
-                        <p>65 kr</p>
-                        <p>&nbsp</p>
-                        <p>pr 100g</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carouselProduct">
-                <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
-                <div class="carouselText">
-                    <h3>Grøn Te</h3>
-                    <div>
-                        <p>65 kr</p>
-                        <p>&nbsp</p>
-                        <p>pr 100g</p>
-                    </div>
-                </div>
-            </div>
+            @endif
+        @endforeach
+        @endforeach
         </div>
         <button id="nextSlider" class="sliderButton rightButton">
             @include('frontend.componets.svger.arrowRight')
