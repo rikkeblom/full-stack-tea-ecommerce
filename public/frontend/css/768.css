@@ -1,0 +1,74 @@
+@media screen and (max-width: 768px) {
+
+    /* ---------------------------- */
+    /* ---------- Header ---------- */
+    /* ---------------------------- */
+
+    .links a {
+        padding: 0 0.1rem !important;
+    }
+
+    /* ---------------------------- */
+    /* ---------- Footer ---------- */
+    /* ---------------------------- */
+
+    footer {
+        gap: 1rem !important;
+        padding: 1rem 1rem !important;
+    }
+
+    .SoMe {
+        width: 30% !important;
+    }
+
+    .footer_links {
+        width: 30% !important;
+    }
+
+    /* -------------------------- */
+    /* ---------- Hero ---------- */
+    /* -------------------------- */
+
+    .heroText h1 {
+        padding: 1rem 1rem;
+    }
+
+    /* ----------------------------- */
+    /* ---------- Forside ---------- */
+    /* ----------------------------- */
+
+    .sliderButton {
+        padding: 0 0;
+    }
+
+    /* ------------------------------------- */
+    /* ---------- Kollektionsside ---------- */
+    /* ------------------------------------- */
+
+    .allProductHeader {
+        width: 68%;
+        padding: 3rem;
+    }
+
+    .allProductHeader h1 {
+        font-size: 2rem;
+    }
+
+    .sortingContainer {
+        justify-content: space-between;
+    }
+    
+    .sortingContainer .brugerMenu {
+        display: block !important;
+    }
+
+    .filterContainer {
+        background: var(--lightGreen);
+        width: 100%;
+        padding: 1rem 2rem;
+        position: absolute;
+        margin-left: -770px;
+        transition: all .9s;
+        opacity: 0;
+    }
+}

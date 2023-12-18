@@ -27,6 +27,11 @@ Route::get('home', function () {
     return view('home');
 });
 
+
+Route::get('kollektionsside', function () {
+    return view('allProducts');
+ });
+
 Route::get('/checkout', function () {
     return view('frontend.componets.checkout');
 });

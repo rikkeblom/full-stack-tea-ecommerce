@@ -1,31 +1,11 @@
-@media screen and (max-width: 754px) {
-    footer {
-        gap: 1rem !important;
-        padding: 1rem 1rem !important;
-    }
+@media screen and (max-width: 480px) {
 
-    .SoMe {
-        width: 30% !important;
-    }
+    /* ---------------------------- */
+    /* ---------- Header ---------- */
+    /* ---------------------------- */
 
-    .footer_links {
-        width: 30% !important;
-    }
-}
-
-@media screen and (max-width: 684px) {
-    .links a {
-        padding: 0 0.5rem !important;
-    }
-}
-
-@media screen and (max-width: 577px) {
     .brugerMenu {
         display: block !important;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0 0.5rem;
     }
 
     .links a {
@@ -53,6 +33,10 @@
         color: var(--white);
     }
 
+    /* ---------------------------- */
+    /* ---------- Footer ---------- */
+    /* ---------------------------- */
+
     footer .svg {
         width: 6rem !important;
         height: 6rem !important;
@@ -65,14 +49,33 @@
     .SoMe h3 {
         font-size: 1.1rem !important;
     }
-}
 
-@media screen and (max-width: 424px) {
     footer {
         flex-direction: column;
     }
 
     .SoMe {
         width: 40% !important;
+    }
+
+    /* -------------------------- */
+    /* ---------- Hero ---------- */
+    /* -------------------------- */
+
+    .heroText h1 {
+        padding: 1rem 1rem;
+    }
+
+    /* ------------------------------------- */
+    /* ---------- Kollektionsside ---------- */
+    /* ------------------------------------- */
+
+    .allProductHeader {
+        width: 88%;
+        padding: 1rem;
+    }
+
+    .allProductHeader h1 {
+        font-size: 2rem;
     }
 }
