@@ -7,4 +7,5 @@
 <body>
     <h1>Home</h1>
 </body>
+    @include('frontend.componets.footer')
 </html>

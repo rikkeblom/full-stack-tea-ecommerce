@@ -9,3 +9,4 @@
 
 <link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/header.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/footer.css')}}">
