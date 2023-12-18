@@ -71,4 +71,21 @@
         transition: all .9s;
         opacity: 0;
     }
+
+    /* --------------------------------- */
+    /* ---------- Produktside ---------- */
+    /* --------------------------------- */
+
+    .productPage {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imgContainer, .productPageDiv {
+        width: 100%;
+    }
+
+    .moreLess_kurv_buttons {
+        flex-wrap: nowrap;
+    }
 }

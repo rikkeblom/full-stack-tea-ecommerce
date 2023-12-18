@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="{{asset('frontend/css/hero.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/forside.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/kollektionsside.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/produktside.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/footer.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/950.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/768.css')}}">
