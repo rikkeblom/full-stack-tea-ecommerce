@@ -5,24 +5,24 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class Kurv_itemSeeder extends Seeder
+class Produkt_produktionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $kurv_item=array(
+        $forbindelser=array(
             array(
-                'kurv_id'=>"1",
-                'item_id'=>"1"
+                'produkt_id'=>1,
+                'produktion_id'=>2,
             ),
             array(
-                'kurv_id'=>"1",
-                'item_id'=>"2"
-            )
+                'produkt_id'=>2,
+                'produktion_id'=>1,
+            ),
         );
 
-        DB::table('kurv_item')->insert($kurv_item);
+        DB::table('produkt_produktion')->insert($forbindelser);
     }
 }
