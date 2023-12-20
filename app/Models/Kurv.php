@@ -17,7 +17,7 @@ class Kurv extends Model
 
     public function item()
     {
-        return $this->belongsToMany(\App\Models\Item::class);
+        return $this->belongsToMany(\App\Models\Item::class, 'item_kurv', 'kurv_id', 'item_id');
     }
 
     protected $table = 'kurve';

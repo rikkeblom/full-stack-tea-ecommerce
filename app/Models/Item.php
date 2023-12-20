@@ -12,11 +12,11 @@ class Item extends Model
     // Relationships
     public function kurv()
     {
-        return $this->belongsToMany(\App\Models\Kurv::class);
+        return $this->belongsToMany(\App\Models\Kurv::class, 'item_kurv', 'item_id', 'kurv_id');
     }
 
     public function variant()
     {
-        return $this->belongsToMany(\App\Models\Variant::class);
+        return $this->belongsToMany(\App\Models\Variant::class, 'item_variant', 'item_id', 'variant_id')->withPivot('id');
     }
 }

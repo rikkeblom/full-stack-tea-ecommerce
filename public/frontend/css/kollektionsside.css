@@ -12,7 +12,7 @@
 }
 
 .allProductHeader p {
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .sortingContainer {
@@ -27,7 +27,7 @@
     border: none;
     background: var(--white);
     padding: 0.3rem;
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .sortingContainer .brugerMenu svg {
@@ -56,7 +56,7 @@
 }
 
 .filter label {
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
     display: flex;
     gap: 0.5rem;
 }
@@ -90,7 +90,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .allProducts_container {
@@ -119,7 +119,7 @@
     list-style: none;
     padding: 1rem;
     text-align: center;
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .allProduct_listPage li {

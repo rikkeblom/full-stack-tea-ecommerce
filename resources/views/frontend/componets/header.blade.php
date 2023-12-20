@@ -23,7 +23,7 @@
             </div>
             <!--/ Search icon -->
             <!-- Cart icon -->
-            <div>
+            <div class="cart-icon open">
                 @include('frontend.componets.svger.cart')
             </div>
             <!--/ Cart icon -->

@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Item;
+use App\Models\Kurv;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,8 @@ class ForsideController extends Controller
 {
     public function forside(){
         $varianter = Variant::where('titel','100g')->get();
-        return view('home')->with('varianter',$varianter);
+        $kurv = Kurv::find(1);
+        $items = $kurv->item()->get();
+        return view('home')->with('varianter',$varianter)->with('items', $items);
     }
 }

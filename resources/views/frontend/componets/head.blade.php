@@ -5,12 +5,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rosario:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/animation.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/header.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/hero.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/kurv.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/forside.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/kollektionsside.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/produktside.css')}}">
