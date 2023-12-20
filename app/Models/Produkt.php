@@ -38,6 +38,11 @@ class Produkt extends Model
         return $this->belongsToMany(\App\Models\Oprindelsesland::class);
     }
 
+    public function billede() 
+    {
+        return $this->belongsToMany(\App\Models\Oprindelsesland::class);
+    }
+
     public function produktion() 
     {
         return $this->belongsToMany(\App\Models\Produktion::class);

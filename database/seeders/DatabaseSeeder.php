@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StatusSeeder::class);
         $this->call(BaserSeeder::class);
         $this->call(ProdukterSeeder::class);
+        $this->call(BillederSeeder::class);
         $this->call(ProduktionstyperSeeder::class);
         $this->call(OprindelseslandeSeeder::class);
 
@@ -32,6 +33,6 @@ class DatabaseSeeder extends Seeder
         $this->call(Base_produktSeeder::class);
         $this->call(Produkt_produktionSeeder::class);
         $this->call(Oprindelsesland_produktSeeder::class);
-
+        $this->call(Billede_produktSeeder::class);
     }
 }
