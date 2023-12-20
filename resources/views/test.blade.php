@@ -1,3 +1,4 @@
+
 @extends('frontend.layouts.main_layout')
 
 @section('indhold')
@@ -17,3 +18,4 @@
         </table>
     @endforeach
 @endsection
+

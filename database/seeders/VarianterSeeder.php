@@ -15,6 +15,7 @@ class VarianterSeeder extends Seeder
         $varianter=array(
             array(
                 'id'=>1,
+                'produkt_id'=>1,
                 'titel'=>'50g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -22,6 +23,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>2,
+                'produkt_id'=>1,
                 'titel'=>'100g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -29,6 +31,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>3,
+                'produkt_id'=>1,
                 'titel'=>'250g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -36,6 +39,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>4,
+                'produkt_id'=>1,
                 'titel'=>'500g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -43,6 +47,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>5,
+                'produkt_id'=>1,
                 'titel'=>'1000g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -50,6 +55,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>6,
+                'produkt_id'=>2,
                 'titel'=>'50g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -57,6 +63,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>7,
+                'produkt_id'=>2,
                 'titel'=>'100g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -64,6 +71,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>8,
+                'produkt_id'=>2,
                 'titel'=>'250g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -71,6 +79,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>9,
+                'produkt_id'=>2,
                 'titel'=>'500g',
                 'lager'=>100,
                 'type'=>'vægt',
@@ -78,6 +87,7 @@ class VarianterSeeder extends Seeder
             ),
             array(
                 'id'=>10,
+                'produkt_id'=>2,
                 'titel'=>'1000g',
                 'lager'=>100,
                 'type'=>'vægt',
