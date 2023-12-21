@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StatusSeeder::class);
         $this->call(ProdukterSeeder::class);
 
+        $this->call(Item_kurvSeeder::class);
         $this->call(VarianterSeeder::class);
         $this->call(OrdrerSeeder::class);
         $this->call(Kollektion_produktSeeder::class);
