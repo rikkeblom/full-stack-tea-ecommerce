@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(Item_kurvSeeder::class);
         $this->call(VarianterSeeder::class);
+        $this->call(Item_variantSeeder::class);
         $this->call(OrdrerSeeder::class);
         $this->call(Kollektion_produktSeeder::class);
         $this->call(Produkt_smagSeeder::class);
