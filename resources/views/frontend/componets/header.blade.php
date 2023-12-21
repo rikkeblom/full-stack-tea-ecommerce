@@ -10,7 +10,7 @@
     <!--/ Links to pages -->
     <!-- Logo -->
         <div>
-            <a href="home">
+            <a href="/home">
                 @include('frontend.componets.svger.logo')
             </a>
         </div>

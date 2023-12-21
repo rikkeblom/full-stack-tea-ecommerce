@@ -1,4 +1,5 @@
 const initCarousel = () => {
+    //if( window.location.pathname.split('/')[1] === "home" ) {
     const slideButtons = document.querySelectorAll(".arrowContainer .sliderButton");
     const carousel = document.querySelector(".arrowContainer .carousel");
 
@@ -10,6 +11,8 @@ const initCarousel = () => {
             carousel.scrollBy({ left: scrollAmount, behavior: "smooth"})
         })
     })
+
+    //}
 }
 
 window.addEventListener("load", initCarousel);

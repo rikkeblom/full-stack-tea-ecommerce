@@ -1,5 +1,5 @@
-<div class="textContainer">
-    @foreach ($variant_produkt_id as $key=>$variant)
+@foreach ($variant_produkt_id as $key=>$variant)
+<div class="textContainer" id="{{$variant->titel}}">
     <div class="namePriceContainer">
         <h2>{{$variant->produkt->titel}}</h2>
         <div>
@@ -15,5 +15,5 @@
         Ornare volutpat sapien id commodo. 
         Adipiscing vitae in facilisi at eu.
     </p>
-    @endforeach
 </div>
+@endforeach

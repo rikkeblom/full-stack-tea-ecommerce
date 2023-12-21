@@ -1,10 +1,11 @@
 "use strict";
+//if( window.location.pathname.split('/')[1] === "allProducts" ) {
+  const filter = document.querySelector('.filterContainer');
+  const filterTrigger = document.querySelector('.sortingContainer .brugerMenu');
 
-const filter = document.querySelector('.filterContainer');
-const filterTrigger = document.querySelector('.sortingContainer .brugerMenu');
+  filterTrigger.addEventListener('click', togglefilter);
 
-filterTrigger.addEventListener('click', togglefilter);
-
-function togglefilter() {
-  filter.classList.toggle('filterContainer--open');
-}
+  function togglefilter() {
+    filter.classList.toggle('filterContainer--open');
+  }
+//}
