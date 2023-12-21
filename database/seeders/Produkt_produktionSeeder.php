@@ -5,24 +5,24 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ItemsSeeder extends Seeder
+class Produkt_produktionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $items=array(
+        $forbindelser=array(
             array(
-                'id'=>1,
-                'quantity'=>1
+                'produkt_id'=>1,
+                'produktion_id'=>2,
             ),
             array(
-                'id'=>2,
-                'quantity'=>2
+                'produkt_id'=>2,
+                'produktion_id'=>1,
             ),
         );
 
-        DB::table('items')->insert($items);
+        DB::table('produkt_produktion')->insert($forbindelser);
     }
 }

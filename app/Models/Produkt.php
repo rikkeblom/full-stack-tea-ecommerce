@@ -14,12 +14,38 @@ class Produkt extends Model
     [
         'titel',
         'type',
-        'beskrivelse'
+        'beskrivelse',
+        'undertitel',
     ];
 
     public function kollektion() 
     {
         return $this->belongsToMany(\App\Models\Kollektion::class);
+    }
+
+    public function smag() 
+    {
+        return $this->belongsToMany(\App\Models\Smag::class);
+    }
+
+    public function base() 
+    {
+        return $this->belongsToMany(\App\Models\Base::class);
+    }
+
+    public function oprindelsesland() 
+    {
+        return $this->belongsToMany(\App\Models\Oprindelsesland::class);
+    }
+
+    public function billede() 
+    {
+        return $this->belongsToMany(\App\Models\Oprindelsesland::class);
+    }
+
+    public function produktion() 
+    {
+        return $this->belongsToMany(\App\Models\Produktion::class);
     }
 
     public function variant()
