@@ -1,6 +1,7 @@
 "use strict";
 const initProduktText = () => {
-    //if( window.location.pathname.split('/')[1] == "porduct" ) {
+    if( window.location.href.indexOf("product") > -1 ) {
+
         //const labels = document.querySelectorAll("label");
         const labels = Array.from(document.querySelectorAll('label'));
         const textFelt = document.querySelectorAll(".textContainer");
@@ -35,7 +36,10 @@ const initProduktText = () => {
                 
             })
         })
-    //}
+
+    } else {
+        console.log("Invalid URL /product in function initProduktText");
+    }
 }
 
 window.addEventListener("load", initProduktText);

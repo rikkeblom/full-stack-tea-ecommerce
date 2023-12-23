@@ -1,5 +1,6 @@
 "use strict";
-//if( window.location.pathname.split('/')[1] === "allProducts" ) {
+if( window.location.href.indexOf("allProducts") > -1 ) {
+
   const filter = document.querySelector('.filterContainer');
   const filterTrigger = document.querySelector('.sortingContainer .brugerMenu');
 
@@ -8,4 +9,7 @@
   function togglefilter() {
     filter.classList.toggle('filterContainer--open');
   }
-//}
+
+} else {
+  console.log("Invalid URL /allProducts in file allProductFilter.js");
+}

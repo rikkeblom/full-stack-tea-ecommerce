@@ -6,7 +6,8 @@ function loadProducts() {
     let beginGet = limit * (thisPage - 1);
     let endGet = limit * thisPage - 1;
 
-    //if( window.location.pathname.split('/')[1] === "allProducts" ) {
+    if( window.location.href.indexOf("allProducts") > -1 ) {
+
         list.forEach((allProduct_product, key)=>{
             if(key >= beginGet && key <= endGet) {
                 allProduct_product.style.display = 'block';
@@ -15,13 +16,17 @@ function loadProducts() {
             }
         })
         listPage();
-    //}
+
+    } else {
+        console.log("Invalid URL /allProducts in function loadProducts");
+    }
 }
 
 loadProducts();
 
 function listPage() {
-    //if( window.location.pathname.split('/')[1] === "allProducts" ) {
+    if( window.location.href.indexOf("allProducts") > -1 ) {
+
         let count = Math.ceil(list.length / limit);
         document.querySelector('.allProduct_listPage').innerHTML = '';
 
@@ -49,7 +54,10 @@ function listPage() {
             next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
             document.querySelector('.allProduct_listPage').appendChild(next);
         }
-    //}
+
+    } else {
+        console.log("Invalid URL /allProducts in function listPage");
+    }
 }
 
 function changePage(i) {
