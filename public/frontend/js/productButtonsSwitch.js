@@ -37,8 +37,26 @@ const initProduktText = () => {
             })
         })
 
+        const more = document.getElementById("plus");
+        const less = document.getElementById("minus");
+        const amount = document.getElementById("amount");
+
+        let number = 1;
+
+        more.addEventListener("click", () => {
+            number++;
+            amount.innerText = number;
+        })
+
+        less.addEventListener("click", () => {
+            if (number > 1) {
+                number--;
+                amount.innerText = number;
+            }
+        })
+
     } else {
-        console.log("Invalid URL /product in function initProduktText");
+        console.log("Invalid URL is not /product in function initProduktText");
     }
 }
 

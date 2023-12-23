@@ -18,7 +18,7 @@ function loadProducts() {
         listPage();
 
     } else {
-        console.log("Invalid URL /allProducts in function loadProducts");
+        console.log("Invalid URL is not /allProducts in function loadProducts");
     }
 }
 
@@ -56,7 +56,7 @@ function listPage() {
         }
 
     } else {
-        console.log("Invalid URL /allProducts in function listPage");
+        console.log("Invalid URL is not /allProducts in function listPage");
     }
 }
 

@@ -14,7 +14,7 @@ const initCarousel = () => {
         })
 
     } else {
-        console.log("Invalid URL /home in function initCarousel");
+        console.log("Invalid URL is not /home in function initCarousel");
     }
 }
 

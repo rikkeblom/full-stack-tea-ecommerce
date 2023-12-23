@@ -12,9 +12,9 @@
     </form>
     <div class="moreLess_kurv_buttons">
         <div class="moreLessButtons">
-            <button>+</button>
-            <p>1</p>
-            <button>-</button>
+            <button id="plus">+</button>
+            <p id="amount">1</p>
+            <button id="minus">-</button>
         </div>
         <button class="kurvButton">Tilføj til kurv</button>
     </div>

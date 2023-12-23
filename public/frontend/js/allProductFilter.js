@@ -11,5 +11,5 @@ if( window.location.href.indexOf("allProducts") > -1 ) {
   }
 
 } else {
-  console.log("Invalid URL /allProducts in file allProductFilter.js");
+  console.log("Invalid URL is not /allProducts in file allProductFilter.js");
 }
