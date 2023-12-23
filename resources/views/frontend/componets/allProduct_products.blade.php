@@ -4,9 +4,13 @@
     @foreach($variant as $key=>$produkt)
         @if ($loop->first)
         <div class="allProduct_product">
-            <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
-            <div class="carouselText">
-                <h3>{{$variant->produkt->titel}}</h3>
+            <a href="/product/{{$variant->produkt_id}}">
+                <img src="{{asset('frontend/img/example_product.jpg')}}" alt="product image">
+            </a>
+            <div class="allProduct_product_text">
+                <a href="/product/{{$variant->produkt_id}}">
+                    <h3>{{$variant->produkt->titel}}</h3>
+                </a>
                 <div>
                     <p>{{$variant->pris}} kr</p>
                     <p>&nbsp</p>

@@ -37,6 +37,7 @@
     flex-direction: column;
     gap: .5rem;
     padding: 1rem;
+    display: none;
 }
 
 .namePriceContainer {
@@ -71,10 +72,15 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    margin-top: .5rem;
     flex-wrap: wrap;
+} 
+
+.weightButtons input {
+    display: none;
 }
 
-.weightButtons button {
+.weightButtons span {
     padding: .5rem 1rem;
     border: 1px solid var(--green);
     background-color: var(--white);
@@ -84,13 +90,13 @@
     cursor: pointer;
 }
 
-.weightButtons button:hover {
+.weightButtons input + span:hover {
     border: 1px solid var(--green);
     background-color: var(--green);
     color: var(--white);
 }
 
-.chosenWeight {
+.weightButtons input:checked + span {
     background-color: var(--green) !important;
     color: var(--white);
 }
