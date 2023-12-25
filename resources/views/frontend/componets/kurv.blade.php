@@ -1,5 +1,4 @@
-use Illuminate\Support\Facades\Session;
-<?php $cart = Session::get('cart'); ?>
+<?php use Illuminate\Support\Facades\Session; $cart = Session::get('cart'); ?>
 
 <div class="drawer_cart">
     <div class="close">@include('frontend.componets.svger.kryds')</div>
@@ -45,7 +44,7 @@ use Illuminate\Support\Facades\Session;
             
             <div class="cart_footer">
                 <div class="cart_footer__details">
-                    <div class="cart_footer__total"><p>Subtotal</p><p>235,5 kr</p></div>
+                    <div class="cart_footer__total"><p>Subtotal</p><p><span></span> kr</p></div>
                     <p class="cart_footer__disclaimer">levering udregnes ved checkout</p>
                 </div>
                 <button>gå til checkout</button>
@@ -53,55 +52,6 @@ use Illuminate\Support\Facades\Session;
         </div>
     </form>
 </div>
-
-<script>
-    function setupCart(){
-        document.querySelector(".open").addEventListener("click", () =>{
-            document.querySelector(".drawer_cart").classList.add("open");
-        })
-        document.querySelector(".drawer_cart .close").addEventListener("click", () =>{
-            document.querySelector(".drawer_cart").classList.remove("open");
-        })
-        document.querySelectorAll(".cart_item").forEach(cartItem =>{
-            cartItem.querySelector(".button-minus").addEventListener("click", removeQuantity)
-        })
-        document.querySelectorAll(".cart_item").forEach(cartItem =>{
-            cartItem.querySelector(".button-plus").addEventListener("click", addQuantity)
-        })
-        document.querySelectorAll(".cart_item").forEach(cartItem =>{
-            cartItem.querySelector(".remove").addEventListener("click", removeFromCart)
-        })
-    }
-
-    setupCart();
-
-    function removeQuantity(e){
-        const product = document.querySelector(".cart_item[data-variant_id='" + e.target.dataset.variant_id + "']")
-        if(product.querySelector("input[type=number]").value >= 2){
-            product.querySelector("input[type=number]").value --;
-        }else if (product.querySelector("input[type=number]").value <= 1){
-            product.remove();
-        }
-    }
-
-    function addQuantity(e){
-        let product = document.querySelector(".cart_item[data-variant_id='" + e.target.dataset.variant_id + "']")
-        let qty = product.querySelector("input[type=number]")
-        let stock = parseInt(e.target.dataset.variant_stock);;
-        if(qty.value < stock){
-            qty.value ++;
-        }else{
-            console.log("some message should say that there is no more stock than what is already added")
-        }
-    }
-
-    function removeFromCart(e){
-        const product = document.querySelector(".cart_item[data-variant_id='" + e.target.dataset.variant_id + "']")
-        product.remove();
-    }
-
-
-</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
 <style>
