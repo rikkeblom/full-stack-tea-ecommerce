@@ -5,7 +5,7 @@
                 @include('frontend.componets.svger.burgerMenu')
             </button>
             <a href="/allProducts">Shop Te</a>
-            <a href="">Om Rivitea</a>
+            <a href="#">Om Rivitea</a>
         </div>
     <!--/ Links to pages -->
     <!-- Logo -->
@@ -23,7 +23,7 @@
             </div>
             <!--/ Search icon -->
             <!-- Cart icon -->
-            <div>
+            <div class="open">
                 @include('frontend.componets.svger.cart')
             </div>
             <!--/ Cart icon -->
@@ -32,7 +32,7 @@
 </header>
 <!-- Links to pages mobile -->
 <div class="links_box">
-    <a href="">Shop Te</a>
-    <a href="">Om Rivitea</a>
+    <a href="/allProducts">Shop Te</a>
+    <a href="#">Om Rivitea</a>
 </div>
 <!--/ Links to pages mobile -->

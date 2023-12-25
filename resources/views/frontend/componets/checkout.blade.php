@@ -23,6 +23,10 @@
 @endsection
 
 <style>
+    #checkout{
+        padding: 2rem;
+    }
+
     #checkout h1{
         color: #000;
         font-family: 'Patrick Hand';

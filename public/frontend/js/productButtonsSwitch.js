@@ -2,13 +2,13 @@
 const initProduktText = () => {
     if( window.location.href.indexOf("product") > -1 ) {
 
-        //const labels = document.querySelectorAll("label");
         const labels = Array.from(document.querySelectorAll('label'));
-        const textFelt = document.querySelectorAll(".textContainer");
+        const textFelt = Array.from(document.querySelectorAll(".textContainer"));
         const pageLoadesText = document.getElementById("100g");
         const inputButton = document.getElementById("input-100g");
         
-        pageLoadesText.style.display = "block";
+        pageLoadesText.classList.add("show");
+        pageLoadesText.setAttribute("data_show", true);
         inputButton.setAttribute("checked", true);
 
         labels.forEach(label => {
@@ -28,9 +28,11 @@ const initProduktText = () => {
                     let textFeltAttr = textFelt.getAttribute("id");
 
                     if ( labelAttr == textFeltAttr ) {
-                        textFelt.style.display = "block";
+                        textFelt.classList.add("show");
+                        textFelt.setAttribute("data_show", true);
                     } else {
-                        textFelt.style.display = "none";
+                        textFelt.classList.remove("show");
+                        textFelt.removeAttribute("data_show");
                     } 
                 });
                 

@@ -3,7 +3,7 @@
     <form>
         <div class="weightButtons">
             @foreach ($variant_produkt_id as $key=>$variant)
-            <label for="{{$variant->titel}}"">
+            <label for="{{$variant->titel}}">
                 <input type="radio" name="{{$variant->titel}}" id="input-{{$variant->titel}}" class="weight">
                 <span>{{$variant->titel}}</span>
             </label>

@@ -57,4 +57,5 @@
     <script src="{{asset('frontend/js/allProductFilter.js')}}"></script>
     <script src="{{asset('frontend/js/allProductPageLimit.js')}}"></script>
     <script src="{{asset('frontend/js/productButtonsSwitch.js')}}"></script>
+    <script src="{{asset('frontend/js/addProductToCart.js')}}"></script>
 </footer>

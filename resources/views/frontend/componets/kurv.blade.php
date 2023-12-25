@@ -39,6 +39,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="cart_item" data-variant_id="2">
                     <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/LV/PB/AM/112068631/leaf-tea-500x500.jpg" alt="">
                     <div class="cart_item__inner">
@@ -75,55 +76,6 @@
     </form>
 </div>
 
-<script>
-    function setupCart(){
-        document.querySelector(".open").addEventListener("click", () =>{
-            document.querySelector(".drawer_cart").classList.add("open");
-        })
-        document.querySelector(".drawer_cart .close").addEventListener("click", () =>{
-            document.querySelector(".drawer_cart").classList.remove("open");
-        })
-        document.querySelectorAll(".cart_item").forEach(cartItem =>{
-            cartItem.querySelector(".button-minus").addEventListener("click", removeQuantity)
-        })
-        document.querySelectorAll(".cart_item").forEach(cartItem =>{
-            cartItem.querySelector(".button-plus").addEventListener("click", addQuantity)
-        })
-        document.querySelectorAll(".cart_item").forEach(cartItem =>{
-            cartItem.querySelector(".remove").addEventListener("click", removeFromCart)
-        })
-    }
-
-    setupCart();
-
-    function removeQuantity(e){
-        const product = document.querySelector(".cart_item[data-variant_id='" + e.target.dataset.variant_id + "']")
-        if(product.querySelector("input[type=number]").value >= 2){
-            product.querySelector("input[type=number]").value --;
-        }else if (product.querySelector("input[type=number]").value <= 1){
-            product.remove();
-        }
-    }
-
-    function addQuantity(e){
-        let product = document.querySelector(".cart_item[data-variant_id='" + e.target.dataset.variant_id + "']")
-        let qty = product.querySelector("input[type=number]")
-        let stock = parseInt(e.target.dataset.variant_stock);;
-        if(qty.value < stock){
-            qty.value ++;
-        }else{
-            console.log("some message should say that there is no more stock than what is already added")
-        }
-    }
-
-    function removeFromCart(e){
-        const product = document.querySelector(".cart_item[data-variant_id='" + e.target.dataset.variant_id + "']")
-        product.remove();
-    }
-
-
-</script>
-
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
 <style>
     .cart_footer{
@@ -157,6 +109,9 @@
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
     }
     .cart_item__quantity .input-group input{
         border: none;
