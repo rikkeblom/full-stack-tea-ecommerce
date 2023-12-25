@@ -1,11 +1,9 @@
+use Illuminate\Support\Facades\Session;
+<?php $cart = Session::get('cart'); ?>
+
 <div class="drawer_cart">
     <div class="close">@include('frontend.componets.svger.kryds')</div>
-    <form
-        action=""
-        id="drawer_cart__form"
-        class=""
-        method="post"
-    >
+    <form action="" id="drawer_cart__form" class="" method="post">
         <div class="drawer_cart__inner">
             <div class="drawer_cart___header">            
                 <h2>Din kurv</h2>
@@ -16,52 +14,33 @@
             </div>
 
             <div class="drawer_cart__cart_items">
-                <div class="cart_item" data-variant_id="1">
-                    <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/LV/PB/AM/112068631/leaf-tea-500x500.jpg" alt="">
-                    <div class="cart_item__inner">
-                        <div class="cart_item__info">
-                            <div class="cart_item__names">
-                                <p class="cart_item__product_name">Assam</p>
-                                <p class="cart_item__variant_name">vægt: 250g</p>
-                            </div>
-                            <div class="cart_item__prices">
-                                <p class="cart_item__price_total">137,5 kr</p>
-                                <p class="cart_item__price_per_item"><span class="price_per_item__current_price">137,5 kr<span><span class="price_per_item__original_price"><span></p>
-                            </div>
-                        </div>
-                        <div class="cart_item__quantity">
-                            <div class="input-group">
-                                <input data-variant_id="1" data-variant_stock="10" type="button" value="-" class="button-minus" data-field="quantity">
-                                <input data-variant_id="1" data-variant_stock="10" type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
-                                <input data-variant_id="1" data-variant_stock="10" type="button" value="+" class="button-plus" data-field="quantity">
-                            </div>
-                            <div data-variant_id="1" class="remove">@include('frontend.componets.svger.trash')</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart_item" data-variant_id="2">
-                    <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/LV/PB/AM/112068631/leaf-tea-500x500.jpg" alt="">
-                    <div class="cart_item__inner">
-                        <div class="cart_item__info">
-                            <div class="cart_item__names">
-                                <p class="cart_item__product_name">Assam</p>
-                                <p class="cart_item__variant_name">vægt: 250g</p>
-                            </div>
-                            <div class="cart_item__prices">
-                                <p class="cart_item__price_total">137,5 kr</p>
-                                <p class="cart_item__price_per_item"><span class="price_per_item__current_price">137,5 kr<span><span class="price_per_item__original_price"><span></p>
+                @if($cart && is_array($cart))
+                    @foreach($cart as $item)
+                        <div class="cart_item" data-variant_id="1">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/LV/PB/AM/112068631/leaf-tea-500x500.jpg" alt="">
+                            <div class="cart_item__inner">
+                                <div class="cart_item__info">
+                                    <div class="cart_item__names">
+                                        <p class="cart_item__product_name">{{ isset($item['produktNavn']) ? $item['produktNavn'] : 'N/A' }}</p>
+                                        <p class="cart_item__variant_name">{{$item['variant']['variantType']}}: {{$item['variant']['variantNavn']}}</p>
+                                    </div>
+                                    <div class="cart_item__prices">
+                                        <p class="cart_item__price_total"><span>{{$item['variant']['variantPris']}}</span> kr</p>
+                                        <p class="cart_item__price_per_item"><span class="price_per_item__current_price">{{$item['variant']['variantPris']}} kr<span><span class="price_per_item__original_price"><span></p>
+                                    </div>
+                                </div>
+                                <div class="cart_item__quantity">
+                                    <div class="input-group">
+                                        <input data-variant_id="1" data-variant_stock="{{$item['quantity']}}" type="button" value="-" class="button-minus" data-field="quantity">
+                                        <input data-variant_id="1" data-variant_stock="{{$item['quantity']}}" type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                        <input data-variant_id="1" data-variant_stock="{{$item['quantity']}}" type="button" value="+" class="button-plus" data-field="quantity">
+                                    </div>
+                                    <div data-variant_id="1" class="remove">@include('frontend.componets.svger.trash')</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="cart_item__quantity">
-                            <div class="input-group">
-                                <input data-variant_id="2" data-variant_stock="10" type="button" value="-" class="button-minus" data-field="quantity">
-                                <input data-variant_id="2" data-variant_stock="10" type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
-                                <input data-variant_id="2" data-variant_stock="10" type="button" value="+" class="button-plus" data-field="quantity">
-                            </div>
-                            <div data-variant_id="2" class="remove">@include('frontend.componets.svger.trash')</div>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
             </div>
             
             <div class="cart_footer">
