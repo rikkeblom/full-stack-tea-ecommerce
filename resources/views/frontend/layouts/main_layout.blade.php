@@ -1,22 +1,9 @@
 <?php 
     use Illuminate\Support\Facades\Session;
     session_start(); 
-    // Storing data in the session
-    Session::put('cart', [
-        1=>[
-            'produktNavn' => 'Earl Grey',
-            'variant' =>            
-                    [
-                        'variantNavn' => '100g',
-                        'variantType' => 'vægt',
-                        'variantPris' => '49'
-                    ]
-            ,
-            'quantity' => 2
-        ]
-    ]);
-
+    // Session::put('cart', []);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
