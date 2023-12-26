@@ -10,7 +10,7 @@ use App\Models\Variant;
 class KollektionssideController extends Controller
 {
     public function kollektionsside(){
-        $varianter = Variant::get();
+        $varianter = Variant::where('titel','100g')->get();
         return view('allProducts')->with('varianter',$varianter);
     }
 }

@@ -9,6 +9,7 @@ use App\Http\Controllers\KurvController;
 use App\Http\Controllers\ProduktKollektionForbindelseController;
 use App\Http\Controllers\ForsideController;
 use App\Http\Controllers\KollektionssideController;
+use App\Http\Controllers\ProduktsideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +38,9 @@ Route::get('/checkout', function () {
     return view('frontend.componets.checkout');
 });
 
-Route::get('product', function () {
+/* Route::get('product', function () {
     return view('product');
-});
+}); */
 
 Route::get('/test2', [KollektionController::class, 'test']);
 
@@ -48,3 +49,5 @@ Route::get('/test1', [KurvController::class, 'test']);
 Route::get('/home', [ForsideController::class, 'forside']);
 
 Route::get('/allProducts', [KollektionssideController::class, 'kollektionsside']);
+
+Route::get('/product/{produkt_id}', [ProduktsideController::class, 'show']);
