@@ -1,17 +1,20 @@
 <div class="buttonsContainer">
     <h3>VÆGT</h3>
-    <div class="weightButtons">
-        <button class="chosenWeight">100g</button>
-        <button>150g</button>
-        <button>250g</button>
-        <button>500g</button>
-        <button>1000g</button>
-    </div>
+    <form>
+        <div class="weightButtons">
+            @foreach ($variant_produkt_id as $key=>$variant)
+            <label for="{{$variant->titel}}"">
+                <input type="radio" name="{{$variant->titel}}" id="input-{{$variant->titel}}" class="weight">
+                <span>{{$variant->titel}}</span>
+            </label>
+            @endforeach
+        </div>
+    </form>
     <div class="moreLess_kurv_buttons">
         <div class="moreLessButtons">
-            <button>+</button>
-            <p>1</p>
-            <button>-</button>
+            <button id="plus">+</button>
+            <p id="amount">1</p>
+            <button id="minus">-</button>
         </div>
         <button class="kurvButton">Tilføj til kurv</button>
     </div>

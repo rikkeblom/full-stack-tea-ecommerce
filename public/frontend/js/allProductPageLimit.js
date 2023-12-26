@@ -6,45 +6,57 @@ function loadProducts() {
     let beginGet = limit * (thisPage - 1);
     let endGet = limit * thisPage - 1;
 
-    list.forEach((allProduct_product, key)=>{
-        if(key >= beginGet && key <= endGet) {
-            allProduct_product.style.display = 'block';
-        } else {
-            allProduct_product.style.display = 'none';
-        }
-    })
-    listPage();
+    if( window.location.href.indexOf("allProducts") > -1 ) {
+
+        list.forEach((allProduct_product, key)=>{
+            if(key >= beginGet && key <= endGet) {
+                allProduct_product.style.display = 'block';
+            } else {
+                allProduct_product.style.display = 'none';
+            }
+        })
+        listPage();
+
+    } else {
+        console.log("Invalid URL is not /allProducts in function loadProducts");
+    }
 }
 
 loadProducts();
 
 function listPage() {
-    let count = Math.ceil(list.length / limit);
-    document.querySelector('.allProduct_listPage').innerHTML = '';
+    if( window.location.href.indexOf("allProducts") > -1 ) {
 
-    if(thisPage != 1) {
-        let prev = document.createElement('li');
-        prev.innerText = '<';
-        prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
-        document.querySelector('.allProduct_listPage').appendChild(prev);
-    }
+        let count = Math.ceil(list.length / limit);
+        document.querySelector('.allProduct_listPage').innerHTML = '';
 
-    for(i = 1; i <= count; i++) {
-        let newPage = document.createElement('li');
-        newPage.innerText = i;
-
-        if(i == thisPage) {
-            newPage.classList.add('active');
+        if(thisPage != 1) {
+            let prev = document.createElement('li');
+            prev.innerText = '<';
+            prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
+            document.querySelector('.allProduct_listPage').appendChild(prev);
         }
-        newPage.setAttribute('onclick', "changePage(" + i + ")");
-        document.querySelector('.allProduct_listPage').appendChild(newPage);
-    }
 
-    if(thisPage != count) {
-        let next = document.createElement('li');
-        next.innerText = '>';
-        next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
-        document.querySelector('.allProduct_listPage').appendChild(next);
+        for(i = 1; i <= count; i++) {
+            let newPage = document.createElement('li');
+            newPage.innerText = i;
+
+            if(i == thisPage) {
+                newPage.classList.add('active');
+            }
+            newPage.setAttribute('onclick', "changePage(" + i + ")");
+            document.querySelector('.allProduct_listPage').appendChild(newPage);
+        }
+
+        if(thisPage != count) {
+            let next = document.createElement('li');
+            next.innerText = '>';
+            next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
+            document.querySelector('.allProduct_listPage').appendChild(next);
+        }
+
+    } else {
+        console.log("Invalid URL is not /allProducts in function listPage");
     }
 }
 
