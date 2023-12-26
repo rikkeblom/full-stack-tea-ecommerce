@@ -114,6 +114,7 @@ function addToCart(){
     const variantLager = "25";
     const variantPris = "34";
     const variantType = "vægt";
+    const varID = 1;
 
         fetch('/ATC', {
         method: 'POST',
@@ -127,7 +128,8 @@ function addToCart(){
             variantNavn,
             variantLager,
             variantPris,
-            variantType
+            variantType,
+            varID
         }),
     })
     .then(response => {

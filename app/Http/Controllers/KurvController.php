@@ -58,23 +58,25 @@ class KurvController extends Controller
         $variantPris = $data['variantPris'] ?? null;
         $variantLager = $data['variantLager'] ?? null;
         $variantType = $data['variantType'] ?? null;
+        $varID = $data['varID'] ?? null;
 
         if ($produktNavn !== null && $quantity !== null && $variantNavn !== null &&
-        $variantPris !== null && $variantLager !== null && $variantType !== null) 
+        $variantPris !== null && $variantLager !== null && $variantType !== null && $varID !== null) 
         {
-
-            $nytIndex = empty($cart) ? 1 : max(array_keys($cart)) + 1;
-            $cart[$nytIndex] = [
-                'produktNavn' => $produktNavn,
-                'quantity' => $quantity,
-                'variant' => [
-                    'variantNavn' => $variantNavn,
-                    'variantType' => $variantType,
-                    'variantPris' => $variantPris,
-                    'variantLager' => $variantLager,
-                ],
-            ];
-            
+            if(isset($cart[$varID])){
+                $cart[$varID]['quantity'] += 1;
+            } else {
+                $cart[$varID] = [
+                    'produktNavn' => $produktNavn,
+                    'quantity' => $quantity,
+                    'variant' => [
+                        'variantNavn' => $variantNavn,
+                        'variantType' => $variantType,
+                        'variantPris' => $variantPris,
+                        'variantLager' => $variantLager,
+                    ],
+                ];
+            }
             session()->put('cart', $cart);
 
             return response()->json(['message' => 'Session data updated successfully - product added', 'cart' => $cart]);

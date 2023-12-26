@@ -1,7 +1,26 @@
 <?php 
     use Illuminate\Support\Facades\Session;
     session_start(); 
+
+    // ---- snyd til tom kurv 
     // Session::put('cart', []);
+
+    // ---- snyd til 1 produkt i kurv
+    // Session::put('cart', [
+    //     1=>[
+    //         'produktNavn' => 'Earl Grey',
+    //         'variant' =>            
+    //                 [
+    //                     'variantNavn' => '100g',
+    //                     'variantType' => 'vægt',
+    //                     'variantPris' => '49',
+    //                     'variantLager' => 99
+    //                 ]
+    //         ,
+    //         'quantity' => 2
+    //     ]
+    // ]);
+
 ?>
 
 
