@@ -56,5 +56,6 @@
     <script src="{{asset('frontend/js/carouselarrow.js')}}"></script>
     <script src="{{asset('frontend/js/allProductFilter.js')}}"></script>
     <script src="{{asset('frontend/js/allProductPageLimit.js')}}"></script>
+    <script src="{{asset('frontend/js/kurv.js')}}"></script>
     <script src="{{asset('frontend/js/productButtonsSwitch.js')}}"></script>
 </footer>
