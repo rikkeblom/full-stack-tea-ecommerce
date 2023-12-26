@@ -48,9 +48,11 @@ Route::get('/test1', [KurvController::class, 'test']);
 
 Route::get('/home', [ForsideController::class, 'forside']);
 
+
 Route::post('/opdater-item', [KurvController::class, 'opdaterItem']);
 Route::post('/fjern-fra-kurv', [KurvController::class, 'fjern']);
 Route::post('/ATC', [KurvController::class, 'ATC']);
 Route::get('/opdater-kurv', [KurvController::class, 'opdaterKurv']);
 Route::get('/allProducts', [KollektionssideController::class, 'kollektionsside']);
 Route::get('/product/{produkt_id}', [ProduktsideController::class, 'show']);
+
