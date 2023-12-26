@@ -8,6 +8,7 @@ use App\Http\Controllers\KollektionController;
 use App\Http\Controllers\KurvController;
 use App\Http\Controllers\ProduktKollektionForbindelseController;
 use App\Http\Controllers\ForsideController;
+use App\Http\Controllers\KollektionssideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,10 +29,9 @@ Route::get('/', function () {
     return view('home');
 }); */
 
-
-Route::get('kollektionsside', function () {
+/* Route::get('kollektionsside', function () {
     return view('allProducts');
- });
+}); */
 
 Route::get('/checkout', function () {
     return view('frontend.componets.checkout');
@@ -47,7 +47,11 @@ Route::get('/test1', [KurvController::class, 'test']);
 
 Route::get('/home', [ForsideController::class, 'forside']);
 
+
 Route::post('/opdater-item', [KurvController::class, 'opdaterItem']);
 Route::post('/fjern-fra-kurv', [KurvController::class, 'fjern']);
 Route::post('/ATC', [KurvController::class, 'ATC']);
 Route::get('/opdater-kurv', [KurvController::class, 'opdaterKurv']);
+
+Route::get('/allProducts', [KollektionssideController::class, 'kollektionsside']);
+
