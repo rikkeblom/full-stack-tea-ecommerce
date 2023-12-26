@@ -61,12 +61,28 @@ labels.forEach(label => {
                             '</div>' +
                         '</div>';
                         
-                    //console.log(cartItemContainer);
-                        
                     cartItemContainer.appendChild(newCartItem);
 
+                    //console.log(cartItemContainer);
+
                     setupCart();
+                    cartSubTotal();
+
                 });
+
+                function cartSubTotal() {
+
+                    const cartTotal = document.querySelector(".cart_footer__total_kr");
+                    let total = 0;
+                    let productPriceNum = parseFloat(productPrice);
+                    //console.log(productPriceNum);
+
+                    for (let i = 0; i < cartItemContainer.children.length; i++) {
+                        total = total + (productAmount * productPriceNum);
+                        //console.log(total);
+                    }
+                    cartTotal.innerText = total + ' kr';
+                }
             }
         });
     });
@@ -89,6 +105,8 @@ function setupCart(){
         cartItem.querySelector(".remove").addEventListener("click", removeFromCart)
     })
 }
+
+setupCart();
 
 function removeQuantity(e){
     const product = document.querySelector(".cart_item[data-variant_id='" + e.target.dataset.variant_id + "']")
@@ -113,4 +131,5 @@ function addQuantity(e){
 function removeFromCart(e){
     const product = document.querySelector(".cart_item[data-variant_id='" + e.target.dataset.variant_id + "']")
     product.remove();
+    //cartSubTotal();
 }

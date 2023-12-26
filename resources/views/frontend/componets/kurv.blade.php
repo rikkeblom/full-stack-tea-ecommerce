@@ -67,7 +67,7 @@
             
             <div class="cart_footer">
                 <div class="cart_footer__details">
-                    <div class="cart_footer__total"><p>Subtotal</p><p>235,5 kr</p></div>
+                    <div class="cart_footer__total"><p>Subtotal</p><p class="cart_footer__total_kr">0 kr</p></div>
                     <p class="cart_footer__disclaimer">levering udregnes ved checkout</p>
                 </div>
                 <button>gå til checkout</button>
