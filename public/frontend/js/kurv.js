@@ -14,6 +14,10 @@ function setupCart(){
             cartItem.querySelector(".button-minus").addEventListener("click", removeQuantity)
             cartItem.querySelector(".button-plus").addEventListener("click", addQuantity)
             cartItem.querySelector(".remove").addEventListener("click", removeFromCart)
+            const qty = cartItem.querySelector("input[type=number]");
+            const varID = cartItem.querySelector("input[type=number]").dataset.cart_item_id;
+
+            updateProductTotal(cartItem, qty, varID)
         })
     }
 
@@ -43,7 +47,6 @@ function removeQuantity(e){
 }
 
 function updateProductTotal(product, qty, varID){
-    // the specific product 
     const singlePrice = parseInt(product.querySelector(".cart_item[data-cart_item_id='" + varID + "'] .cart_item__price_per_item").innerText);
     const totalPrice = singlePrice * qty.value;
     document.querySelector(".cart_item[data-cart_item_id='" + varID + "'] .cart_item__price_total span").innerText = totalPrice;
@@ -108,15 +111,15 @@ function updateSessionData(link, itemId, newQuantity) {
 function addToCart(){
     const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-    const produktNavn = "Test";
-    const quantity = 1;
-    const variantNavn = "500g";
-    const variantLager = "25";
-    const variantPris = "34";
-    const variantType = "vægt";
-    const varID = 1;
+    const produktNavn   =   document.querySelector(".namePriceContainer h2").innerText;
+    const quantity      =   document.querySelector("#amount").value;
+    const variantNavn   =   document.querySelector(".weightButtons input:checked + span").innerText;
+    const variantPris   =   document.querySelector(".weightButtons input:checked + span").dataset.variant_pris;
+    const variantType   =   document.querySelector(".weightButtons input:checked + span").dataset.variant_type;
+    const variantLager  =   document.querySelector(".weightButtons input:checked + span").dataset.variant_lager;
+    const varID         =   document.querySelector(".weightButtons input:checked + span").dataset.variant_id;
 
-        fetch('/ATC', {
+    fetch('/ATC', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -140,21 +143,6 @@ function addToCart(){
     })
     .then(data => {
         console.log('Response from /ATC:', data);
-        // if (data && data.message === 'Session data updated successfully - product added') {
-        //     fetch('/opdater-kurv')
-        //         .then(response => response.text()) // Change response type to text
-        //         .then(html => {
-        //             const drawerCart = document.querySelector('.drawer_cart');
-        //             drawerCart.innerHTML = html; // Assign HTML directly
-        //             setupCart(); // Rebind event listeners if needed
-        //             updateCartTotal(); // Update total after adding an item
-        //         })
-        //         .catch(error => {
-        //             console.error('Error fetching cart:', error);
-        //         });
-        // } else {
-        //     console.error('Error updating session data');
-        // }
     })
     .catch(error => {
         console.error('Error updating session data:', error);

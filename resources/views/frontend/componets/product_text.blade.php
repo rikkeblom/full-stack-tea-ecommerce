@@ -3,9 +3,9 @@
     <div class="namePriceContainer">
         <h2>{{$variant->produkt->titel}}</h2>
         <div>
-            <p>{{$variant->pris}} kr</p>
+            <p class="variantPris">{{$variant->pris}} kr</p>
             <p>&nbsp</p>
-            <p>{{$variant->titel}}</p>
+            <p class="variantTitel">{{$variant->titel}}</p>
         </div>
     </div>
     <h3>Japansk rullet grøn te</h3>

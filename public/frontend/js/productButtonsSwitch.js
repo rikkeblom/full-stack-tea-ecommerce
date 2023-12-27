@@ -45,13 +45,13 @@ const initProduktText = () => {
 
         more.addEventListener("click", () => {
             number++;
-            amount.innerText = number;
+            amount.value = number;
         })
 
         less.addEventListener("click", () => {
             if (number > 1) {
                 number--;
-                amount.innerText = number;
+                amount.value = number;
             }
         })
 

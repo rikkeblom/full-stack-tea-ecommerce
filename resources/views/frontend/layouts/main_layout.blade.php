@@ -14,7 +14,8 @@
     //                     'variantNavn' => '100g',
     //                     'variantType' => 'vægt',
     //                     'variantPris' => '49',
-    //                     'variantLager' => 99
+    //                     'variantLager' => 99,
+    //                     'variantID' => 1
     //                 ]
     //         ,
     //         'quantity' => 2
