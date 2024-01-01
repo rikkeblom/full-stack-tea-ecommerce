@@ -10,7 +10,7 @@
     <!--/ Links to pages -->
     <!-- Logo -->
         <div>
-            <a href="/home">
+            <a href="/">
                 @include('frontend.componets.svger.logo')
             </a>
         </div>
@@ -32,7 +32,7 @@
 </header>
 <!-- Links to pages mobile -->
 <div class="links_box">
-    <a href="">Shop Te</a>
+    <a href="/allProducts">Shop Te</a>
     <a href="">Om Rivitea</a>
 </div>
 <!--/ Links to pages mobile -->

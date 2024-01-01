@@ -23,6 +23,9 @@
         font-weight: 400;
         line-height: normal;
     }
+    .cart_footer a{
+        text-decoration: none;
+    }
     .cart_footer p{
         font-family: 'Rosarivo';
     }

@@ -2,7 +2,8 @@
 
 <div class="drawer_cart">
     <div class="close">@include('frontend.componets.svger.kryds')</div>
-    <form action="" id="drawer_cart__form" class="" method="post">
+    <div id="drawer_cart__form" >
+        @csrf
         <div class="drawer_cart__inner">
             <div class="drawer_cart___header">            
                 <h2>Din kurv</h2>
@@ -49,9 +50,9 @@
                     <div class="cart_footer__total"><p>Subtotal</p><p><span></span> kr</p></div>
                     <p class="cart_footer__disclaimer">levering udregnes ved checkout</p>
                 </div>
-                <button>gå til checkout</button>
+                <a href="/checkout"><button @if(!$cart && !is_array($cart)) disabled @endif>gå til checkout</button></a>
             </div>
         </div>
-    </form>
+    </div>
 </div>
 
