@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('varianter', function (Blueprint $table) {
             $table->id();
-            $table->foreign('produkt_id')->references('id')->on('Produkt')->onDelete('SET NULL');
+            $table->unsignedBigInteger('produkt_id')->nullable();
             $table->timestamps();
             $table->string('titel');
             $table->string('type');
             $table->smallInteger('lager');
-            $table->smallInteger('pris');
+            $table->float('pris');
+
+            $table->foreign('produkt_id')->references('id')->on('produkter')->onDelete('SET NULL');
         });
     }
 

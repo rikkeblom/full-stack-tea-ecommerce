@@ -20,13 +20,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        Schema::create('produkter', function (Blueprint $table) {
-            $table->id();
-            $table->string('titel');
-            $table->string('type');
-            $table->string('beskrivelse');
-        });
     }
 
     /**

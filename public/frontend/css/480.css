@@ -1,0 +1,90 @@
+@media screen and (max-width: 480px) {
+
+    /* ---------------------------- */
+    /* ---------- Header ---------- */
+    /* ---------------------------- */
+
+    .brugerMenu {
+        display: block !important;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .svger div {
+        padding: 0 0.5rem !important;
+    }
+
+    .links_box {
+        z-index: 8;
+        width: 100vw;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color: var(--lightGreen);
+    }
+
+    .links_box a {
+        display: flex;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        font-family: 'Rosarivo', sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+        color: var(--white);
+    }
+
+    /* ---------------------------- */
+    /* ---------- Footer ---------- */
+    /* ---------------------------- */
+
+    footer .svg {
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+
+    .SoMe + .footer_links {
+        width: auto !important;
+    }
+
+    .SoMe h3 {
+        font-size: 1.1rem !important;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .SoMe {
+        width: 40% !important;
+    }
+
+    /* -------------------------- */
+    /* ---------- Hero ---------- */
+    /* -------------------------- */
+
+    .heroText h1 {
+        padding: 1rem 1rem;
+    }
+
+    /* ------------------------------------- */
+    /* ---------- Kollektionsside ---------- */
+    /* ------------------------------------- */
+
+    .allProductHeader {
+        width: 88%;
+        padding: 1rem;
+    }
+
+    .allProductHeader h1 {
+        font-size: 2rem;
+    }
+
+    /* --------------------------------- */
+    /* ---------- Produktside ---------- */
+    /* --------------------------------- */
+
+    .moreLess_kurv_buttons {
+        flex-wrap: wrap;
+    }
+}

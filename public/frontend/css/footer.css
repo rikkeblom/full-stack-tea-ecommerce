@@ -1,0 +1,80 @@
+@import url(colors.css);
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--green);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+footer .svg {
+    width: 8rem;
+    height: 8rem;
+}
+
+.SoMe h2 {
+    color: var(--white);
+    font-family: 'Patrick Hand', cursive;
+    text-decoration: underline;
+    padding:  0 0 0.5rem 0;
+}
+
+.SoMe h3 {
+    color: var(--white);
+    font-family: 'Patrick Hand', cursive;
+    padding: 0 0.5rem;
+}
+
+.SoMe div {
+    display: flex;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_links a {
+    color: var(--white);
+    padding: 0.3rem 0.1rem;
+    text-decoration: none;
+    font-family: 'Rosarivo', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.footer_links a:hover {
+    color: var(--lightGreen);
+    text-decoration: underline;
+}
+
+.trust {
+    display: flex;
+    flex-direction: column;
+}
+
+.trust img {
+    padding: 1rem 0 0 0;
+}
+
+.kontakt h2 {
+    color: var(--white);
+    font-family: 'Patrick Hand', cursive;
+    text-decoration: underline;
+    padding:  0 0 0.5rem 0;
+}
+
+.kontakt p {
+    color: var(--white);
+    font-family: 'Rosarivo', sans-serif;
+    padding: 0 0.5rem;
+}
+
+.info {
+    display: flex;
+    padding: 0.2rem 0;
+    align-items: center;
+}

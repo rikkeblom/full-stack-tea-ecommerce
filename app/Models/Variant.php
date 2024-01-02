@@ -27,6 +27,10 @@ class Variant extends Model
         return $this->belongsToMany(\App\Models\Item::class);
     }
 
+    public static function getVariantByProduktId($produkt_id){
+        return Variant::with(['produkt'])->where('produkt_id', $produkt_id)->get();
+    }
+
     protected $table = 'varianter';
 }
 

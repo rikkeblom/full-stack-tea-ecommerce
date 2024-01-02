@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('kollektion_produkt', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreign('produkt_id')->references('id')->on('Produkt')->onDelete('SET NULL');
-            $table->foreign('kollektion_id')->references('id')->on('Kollektion')->onDelete('SET NULL');
+            $table->unsignedBigInteger('produkt_id')->nullable();
+            $table->unsignedBigInteger('kollektion_id')->nullable();
+            $table->foreign('produkt_id')->references('id')->on('produkter')->onDelete('SET NULL');
+            $table->foreign('kollektion_id')->references('id')->on('kollektioner')->onDelete('SET NULL');
         });
     }
 

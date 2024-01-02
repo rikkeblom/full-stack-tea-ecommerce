@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->text('beskrivelse')->nullable();
+            $table->text('seo_tekst')->nullable();
             $table->string('titel');
             $table->string('billede')->nullable();
         });

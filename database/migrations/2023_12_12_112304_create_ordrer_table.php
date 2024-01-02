@@ -14,12 +14,19 @@ return new class extends Migration
         Schema::create('ordrer', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreign('faktureringsadresse_id')->references('id')->on('Adresse')->onDelete('SET NULL');
-            $table->foreign('leveringsadresse_id')->references('id')->on('Adresse')->onDelete('SET NULL');
-            $table->foreign('betalingmetode_id')->references('id')->on('Betalingsmetode')->onDelete('SET NULL');
-            $table->foreign('betalingsstatus_id')->references('id')->on('Status')->onDelete('SET NULL');
-            $table->foreign('kurv_id')->references('id')->on('Kurv')->onDelete('SET NULL');
-            $table->foreign('leveringsstatus_id')->references('id')->on('Status')->onDelete('SET NULL');
+            $table->unsignedBigInteger('faktureringsadresse_id')->nullable();
+            $table->unsignedBigInteger('leveringsadresse_id')->nullable();
+            $table->unsignedBigInteger('betalingmetode_id')->nullable();
+            $table->unsignedBigInteger('betalingsstatus_id')->nullable();
+            $table->unsignedBigInteger('kurv_id')->references('id')->nullable();
+            $table->unsignedBigInteger('leveringsstatus_id')->nullable();
+
+            $table->foreign('faktureringsadresse_id')->references('id')->on('adresser')->onDelete('SET NULL');
+            $table->foreign('leveringsadresse_id')->references('id')->on('adresser')->onDelete('SET NULL');
+            $table->foreign('betalingmetode_id')->references('id')->on('betalingsmetoder')->onDelete('SET NULL');
+            $table->foreign('betalingsstatus_id')->references('id')->on('status')->onDelete('SET NULL');
+            $table->foreign('kurv_id')->references('id')->on('kurve')->onDelete('SET NULL');
+            $table->foreign('leveringsstatus_id')->references('id')->on('status')->onDelete('SET NULL');
         });
     }
 

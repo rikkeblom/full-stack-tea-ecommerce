@@ -1,0 +1,53 @@
+@media screen and (max-width: 950px) {
+
+    /* -------------------------- */
+    /* ---------- Hero ---------- */
+    /* -------------------------- */
+
+    .heroText {
+        height: 300px;
+    }
+
+    .heroText h1 {
+        padding: 1rem 1rem;
+    }
+
+    .heroText img {
+        height: 40vh;
+    }
+
+    /* ----------------------------- */
+    /* ---------- Forside ---------- */
+    /* ----------------------------- */
+
+    .favoritTeLinks {
+        overflow-x: scroll;
+        scrollbar-color: var(--green) rgb(240, 240, 240);
+        scrollbar-width: 10px;
+    }
+
+    /* ------------------------------------- */
+    /* ---------- Kollektionsside ---------- */
+    /* ------------------------------------- */
+
+    .allProductHeader {
+        padding: 2rem;
+        width: 58%;
+    }
+
+    .filterContainer {
+        width: 40%;
+    }
+
+    /* --------------------------------- */
+    /* ---------- Produktside ---------- */
+    /* --------------------------------- */
+
+    .imgContainer {
+        width: 50%;
+    }
+
+    .moreLess_kurv_buttons {
+        flex-wrap: wrap;
+    }
+}
