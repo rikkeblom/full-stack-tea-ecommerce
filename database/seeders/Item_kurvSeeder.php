@@ -5,14 +5,14 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class Kurv_itemSeeder extends Seeder
+class Item_kurvSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $kurv_item=array(
+        $item_kurv=array(
             array(
                 'kurv_id'=>"1",
                 'item_id'=>"1"

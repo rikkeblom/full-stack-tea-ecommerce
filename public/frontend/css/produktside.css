@@ -3,7 +3,7 @@
     gap: 2rem;
     padding: 2rem;
     width: 100%;
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .productPageDiv {
@@ -37,6 +37,7 @@
     flex-direction: column;
     gap: .5rem;
     padding: 1rem;
+    display: none;
 }
 
 .namePriceContainer {
@@ -71,26 +72,31 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    margin-top: .5rem;
     flex-wrap: wrap;
+} 
+
+.weightButtons input {
+    display: none;
 }
 
-.weightButtons button {
+.weightButtons span {
     padding: .5rem 1rem;
     border: 1px solid var(--green);
     background-color: var(--white);
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
 }
 
-.weightButtons button:hover {
+.weightButtons input + span:hover {
     border: 1px solid var(--green);
     background-color: var(--green);
     color: var(--white);
 }
 
-.chosenWeight {
+.weightButtons input:checked + span {
     background-color: var(--green) !important;
     color: var(--white);
 }
@@ -101,7 +107,7 @@
     margin-bottom: 1rem;
 }
 
-.moreLessButtons {
+/* .moreLessButtons {
     display: flex;
     gap: .5rem;
     align-items: center;
@@ -122,10 +128,13 @@
     background: var(--gray);
 }
 
-.moreLessButtons p {
-    padding: .5rem;
+.moreLessButtons input {
     font-size: 1.5rem;
-}
+    border: none;
+    padding: 0;
+    width: 32px;
+    text-align: center;
+} */
 
 .kurvButton {
     width: 100%;
@@ -157,4 +166,34 @@
     height: 10px;
     border-radius: 100%;
     box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.19);
+}
+
+.moreLessButtons{
+    border: #829B3A solid 1px;
+    border-radius: 4px;
+    padding: .5rem;
+    display: flex;
+}
+.moreLessButtons input[type="number"]{
+    width: 2rem;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    resize: vertical;
+    font-family: 'Rosarivo';
+}
+.moreLessButtons input[type="number"]:focus-visible{
+    outline: #C2C2C2;
+}
+.moreLessButtons input[type="button"]{
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Rosarivo';
+    line-height: 16px;
+}
+.moreLessButtons input{
+    border: none;
+    background: none;
+    border-radius: 0;
 }

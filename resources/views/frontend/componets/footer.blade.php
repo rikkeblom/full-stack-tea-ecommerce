@@ -1,7 +1,7 @@
 <footer>
     <!-- Logo -->
         <div>
-            <a href="home">
+            <a href="/home">
                 @include('frontend.componets.svger.logo')
             </a>
         </div>
@@ -21,9 +21,9 @@
     <!--/ SoMe -->
     <!-- Links to pages -->
         <div class="footer_links">
-            <a href="">Shop Te</a>
-            <a href="">Om Rivitea</a>
-            <a href="">Privatlivspolitik</a>
+            <a href="/allProducts">Shop Te</a>
+            <a href="#">Om Rivitea</a>
+            <a href="#">Privatlivspolitik</a>
         </div>
     <!--/ Links to pages -->
     <!-- Trust -->
@@ -56,4 +56,6 @@
     <script src="{{asset('frontend/js/carouselarrow.js')}}"></script>
     <script src="{{asset('frontend/js/allProductFilter.js')}}"></script>
     <script src="{{asset('frontend/js/allProductPageLimit.js')}}"></script>
+    <script src="{{asset('frontend/js/kurv.js')}}"></script>
+    <script src="{{asset('frontend/js/productButtonsSwitch.js')}}"></script>
 </footer>

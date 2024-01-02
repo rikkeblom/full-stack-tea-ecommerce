@@ -4,13 +4,13 @@
             <button class="brugerMenu">
                 @include('frontend.componets.svger.burgerMenu')
             </button>
-            <a href="kollektionsside">Shop Te</a>
+            <a href="/allProducts">Shop Te</a>
             <a href="">Om Rivitea</a>
         </div>
     <!--/ Links to pages -->
     <!-- Logo -->
         <div>
-            <a href="home">
+            <a href="/home">
                 @include('frontend.componets.svger.logo')
             </a>
         </div>
@@ -23,7 +23,7 @@
             </div>
             <!--/ Search icon -->
             <!-- Cart icon -->
-            <div>
+            <div class="cart open">
                 @include('frontend.componets.svger.cart')
             </div>
             <!--/ Cart icon -->

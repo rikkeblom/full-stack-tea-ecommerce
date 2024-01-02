@@ -1,22 +1,25 @@
 <div class="buttonsContainer">
     <h3>VÆGT</h3>
-    <div class="weightButtons">
-        <button class="chosenWeight">100g</button>
-        <button>150g</button>
-        <button>250g</button>
-        <button>500g</button>
-        <button>1000g</button>
-    </div>
-    <div class="moreLess_kurv_buttons">
-        <div class="moreLessButtons">
-            <button>+</button>
-            <p>1</p>
-            <button>-</button>
+    <form>
+        <div class="weightButtons">
+            @foreach ($variant_produkt_id as $key=>$variant)
+            <label for="{{$variant->titel}}">
+                <input type="radio" name="{{$variant->titel}}" id="input-{{$variant->titel}}" class="weight">
+                <span data-variant_pris="{{$variant->pris}}" data-variant_lager="{{$variant->lager}}" data-variant_id="{{$variant->id}}" data-variant_type="{{$variant->type}}">{{$variant->titel}}</span>
+            </label>
+            @endforeach
         </div>
-        <button class="kurvButton">Tilføj til kurv</button>
-    </div>
-    <div class="inventory">
+        <div class="moreLess_kurv_buttons">
+            <div class="moreLessButtons">
+                <input type="button" id="minus" value="-">
+                <input value="1" type="number" id="amount">
+                <input type="button" id="plus" value="+">
+            </div>
+            <button onclick="addToCart()" class="kurvButton">Tilføj til kurv</button>
+        </div>
+    </form>
+    {{-- <div class="inventory">
         <div></div>
         <p>Produktet er på lager</p>
-    </div>
+    </div> --}}
 </div>
