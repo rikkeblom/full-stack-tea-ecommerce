@@ -17,6 +17,7 @@
     }
 
     .links_box {
+        z-index: 8;
         width: 100vw;
         padding: 1rem;
         margin-bottom: 1rem;
@@ -27,7 +28,7 @@
         display: flex;
         padding: 0.5rem 1rem;
         text-decoration: none;
-        font-family: 'Rosario', sans-serif;
+        font-family: 'Rosarivo', sans-serif;
         font-weight: bold;
         font-size: 1rem;
         color: var(--white);

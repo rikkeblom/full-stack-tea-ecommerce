@@ -12,7 +12,32 @@
 }
 
 .allProductHeader p {
+    font-family: 'Rosarivo', sans-serif;
+}
+
+.allProduct_product_text {
+    padding: 1rem;
+}
+
+.allProduct_product_text a, .allProduct_product_text h3 {
+    text-decoration: none;
+    color: var(--black);
     font-family: 'Rosario', sans-serif;
+}
+
+.allProduct_product_text a:hover, .allProduct_product_text h3:hover {
+    text-decoration: underline;
+    color: var(--green);
+}
+
+.allProduct_product_text div {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.allProduct_product_text div p:last-child {
+    font-size: 10px;
 }
 
 .sortingContainer {
@@ -27,7 +52,7 @@
     border: none;
     background: var(--white);
     padding: 0.3rem;
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .sortingContainer .brugerMenu svg {
@@ -56,7 +81,7 @@
 }
 
 .filter label {
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
     display: flex;
     gap: 0.5rem;
 }
@@ -90,7 +115,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .allProducts_container {
@@ -119,7 +144,7 @@
     list-style: none;
     padding: 1rem;
     text-align: center;
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .allProduct_listPage li {

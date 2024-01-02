@@ -28,7 +28,7 @@
 .favoritTeLinks a {
     text-decoration: none;
     color: var(--black);
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .favoritTeLinks a:hover {
@@ -44,7 +44,7 @@
 } 
 
 .carouselContainer h2 {
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 } 
 
 .arrowContainer {
@@ -99,7 +99,7 @@
 }
 
 .carouselProduct h3 + p{
-    font-family: 'Rosario', sans-serif;
+    font-family: 'Rosarivo', sans-serif;
 }
 
 .carouselText {
