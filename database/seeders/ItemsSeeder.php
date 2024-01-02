@@ -14,10 +14,12 @@ class ItemsSeeder extends Seeder
     {
         $items=array(
             array(
-                'id'=>1
+                'id'=>1,
+                'quantity'=>1
             ),
             array(
-                'id'=>2
+                'id'=>2,
+                'quantity'=>2
             ),
         );
 

@@ -16,7 +16,9 @@ return new class extends Migration
             $table->timestamps();
             $table->mediumText('beskrivelse');
             $table->string('titel');
+            $table->string('undertitel');
             $table->string('type');
+            $table->boolean('koffein');
         });
     }
 
