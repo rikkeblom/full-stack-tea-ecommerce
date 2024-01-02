@@ -20,6 +20,9 @@ function setupCart(){
             updateProductTotal(cartItem, qty, varID)
         })
     }
+    if(document.querySelector(".drawer_cart .cart_footer__details button")){
+        document.querySelector(".drawer_cart .cart_footer__details button").addEventListener("click", test)
+    }
 
     if(document.querySelector(".trust")){
         document.querySelector(".trust").addEventListener("click", addToCart)
@@ -29,6 +32,10 @@ function setupCart(){
 }
 
 setupCart();
+
+function test(){
+    console.log("test")
+}
 
 function removeQuantity(e){
     const varID = e.target.dataset.cart_item_id;

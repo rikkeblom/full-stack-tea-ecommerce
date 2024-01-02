@@ -45,7 +45,7 @@ class KurvController extends Controller
 
     public function ATC(Request $request)
     {
-        $cart = Session::get('cart') ?? [];;
+        $cart = Session::get('cart') ?? [];
         $data = $request->json()->all(); // Get all JSON data sent in the request
 
         if (empty($cart) || !is_array($cart)) {
@@ -84,12 +84,9 @@ class KurvController extends Controller
         return response()->json(['error' => 'Invalid item ID or cart data'], 400);
     }
 
-    public function opdaterKurv(Request $request)
+    public function checkout()
     {
-        //virker ikke endnu
-        $cart = Session::get('cart') ?? [];
-        $html = view('frontend.componets.kurv', ['cart' => $cart])->render();
-        return response()->json(['html' => $html]);
+        return view('frontend.componets.checkout');
     }
 }
 

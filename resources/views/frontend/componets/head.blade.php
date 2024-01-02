@@ -19,3 +19,4 @@
 <link rel="stylesheet" href="{{asset('frontend/css/768.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/480.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/kurv.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/checkout.css')}}">
